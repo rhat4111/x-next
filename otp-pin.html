@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One time password confirmation</title>
+    <link rel="stylesheet" href="./assets/css/common.css" />
+    <link rel="stylesheet" href="./assets/css/otp-pin.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="./assets/images/x-next-dark.png" alt="" />
+        <span></span>
+        <img src="./assets/images/open-serve-dark.png" alt="" />
+      </div>
+      <div class="card">
+        <p class="title">A one-time PIN has been sent to xxx xxx 2017</p>
+        <p class="description">Please insert the provided OTP to continue.</p>
+        <div class="inputs">
+          <input type="text" id="digit-1" data-next="digit-2" />
+          <input
+            type="text"
+            id="digit-2"
+            data-next="digit-3"
+            data-previous="digit-1"
+          />
+          <input
+            type="text"
+            id="digit-3"
+            data-next="digit-4"
+            data-previous="digit-2"
+          />
+          <input
+            type="text"
+            id="digit-4"
+            data-next="digit-5"
+            data-previous="digit-3"
+          />
+          <input type="text" id="digit-5" data-previous="digit-4" />
+        </div>
+        <a href="./payment.html" class="btn btn-warning disabled" id="continue">Continue</a>
+        <a href="#" class="resend">Resend OTP</a>
+      </div>
+    </div>
+
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/otp-pin.js"></script>
+  </body>
+</html>
